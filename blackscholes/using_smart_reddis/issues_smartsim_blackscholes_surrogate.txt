@@ -1,0 +1,24 @@
+when executing C++ code:
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/bohan/.local/lib/python3.8/site-packages/smartsim/experiment.py", line 192, in start
+    self._control.start(
+  File "/home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/control/controller.py", line 90, in start
+    self._launch(manifest)
+  File "/home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/control/controller.py", line 303, in _launch
+    self._launch_orchestrator(orchestrator)
+  File "/home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/control/controller.py", line 362, in _launch_orchestrator
+    self._orchestrator_launch_wait(orchestrator)
+  File "/home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/control/controller.py", line 555, in _orchestrator_launch_wait
+    raise SmartSimError(msg)
+smartsim.error.errors.SmartSimError: Orchestrator failed during startup See /home/bohan/blackscholes/blackscholes/using_smart_reddis/moving_tensors/database for details
+
+Explanation:
+mismatch between the data types used in your TorchScript model and the input data. Specifically, the error mentions an expected scalar type of Float but found Double.
+
+Resolution:
+Search (Ctrl + F) double and replace with float
+e.g. 
+std::vector<double> input_tensor(n_values, 0);  --> std::vector<float> input_tensor(n_values, 0);
+client.put_tensor(in_key, input_tensor.data(), dims, SRTensorTypeDouble, SRMemLayoutContiguous);   --> client.put_tensor(in_key, input_tensor.data(), dims, SRTensorTypeFloat, SRMemLayoutContiguous);
+

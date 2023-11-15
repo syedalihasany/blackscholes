@@ -1,0 +1,21 @@
+----------   Running  Command   ---------- 
+
+COMMAND: /home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/bin/redis-server /home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/config/redis.conf --loadmodule /home/bohan/.local/lib/python3.8/site-packages/smartsim/_core/lib/redisai.so --port 6379 --bind 127.0.0.1 --bind-source-addr 127.0.0.1
+
+IPADDRESS: 127.0.0.1
+
+NETWORK: lo
+
+------------------------------ 
+
+
+----------   Output   ---------- 
+
+
+276893:C 14 Nov 2023 22:39:06.649 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+276893:C 14 Nov 2023 22:39:06.649 # Redis version=7.0.5, bits=64, commit=1571907e, modified=0, pid=276893, just started
+276893:C 14 Nov 2023 22:39:06.649 # Configuration loaded
+276893:M 14 Nov 2023 22:39:06.650 * Increased maximum number of open files to 50032 (it was originally set to 1024).
+276893:M 14 Nov 2023 22:39:06.650 * monotonic clock: POSIX clock_gettime
+276893:M 14 Nov 2023 22:39:06.650 # Warning: Could not create server TCP listening socket 127.0.0.1:6379: bind: Address already in use
+276893:M 14 Nov 2023 22:39:06.650 # Failed listening on port 6379 (TCP), aborting.

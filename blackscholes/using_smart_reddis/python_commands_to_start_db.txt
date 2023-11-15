@@ -1,0 +1,18 @@
+import smartsim
+import smartredis
+import numpy as np
+from smartredis import Client
+from smartsim import Experiment
+
+REDIS_PORT=6379								# Alternatively:
+exp = Experiment("moving_tensors", launcher="local")                     	# exp = Experiment("MyExample", launcher='local')
+db = exp.create_database(db_nodes=1,port=REDIS_PORT,interface="lo")		# db = Orchestrator()
+exp.generate(db)								
+exp.start(db)
+
+
+# After executing the CPP file 
+exp.stop(db)
+
+# Reference: https://www.craylabs.org/docs/tutorials/getting_started/getting_started.html
+                         
