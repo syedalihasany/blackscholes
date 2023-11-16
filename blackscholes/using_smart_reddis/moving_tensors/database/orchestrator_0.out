@@ -12,10 +12,10 @@ NETWORK: lo
 ----------   Output   ---------- 
 
 
-276893:C 14 Nov 2023 22:39:06.649 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
-276893:C 14 Nov 2023 22:39:06.649 # Redis version=7.0.5, bits=64, commit=1571907e, modified=0, pid=276893, just started
-276893:C 14 Nov 2023 22:39:06.649 # Configuration loaded
-276893:M 14 Nov 2023 22:39:06.650 * Increased maximum number of open files to 50032 (it was originally set to 1024).
-276893:M 14 Nov 2023 22:39:06.650 * monotonic clock: POSIX clock_gettime
-276893:M 14 Nov 2023 22:39:06.650 # Warning: Could not create server TCP listening socket 127.0.0.1:6379: bind: Address already in use
-276893:M 14 Nov 2023 22:39:06.650 # Failed listening on port 6379 (TCP), aborting.
+289080:C 16 Nov 2023 03:20:18.981 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+289080:C 16 Nov 2023 03:20:18.981 # Redis version=7.0.5, bits=64, commit=1571907e, modified=0, pid=289080, just started
+289080:C 16 Nov 2023 03:20:18.981 # Configuration loaded
+289080:M 16 Nov 2023 03:20:18.982 * Increased maximum number of open files to 50032 (it was originally set to 1024).
+289080:M 16 Nov 2023 03:20:18.982 * monotonic clock: POSIX clock_gettime
+289080:M 16 Nov 2023 03:20:18.982 # Warning: Could not create server TCP listening socket 127.0.0.1:6379: bind: Address already in use
+289080:M 16 Nov 2023 03:20:18.982 # Failed listening on port 6379 (TCP), aborting.

@@ -76,7 +76,7 @@ int main(int argc, char* argv[]) {
     std::string out_key = "output_key";
 
     // Put the tensor into the database that was loaded from file
-    client.put_tensor(in_key, input_tensor.data(), dims, SRTensorTypeFloat, SRMemLayoutContiguous);
+    client.put_tensor(in_key, input_tensor.data(), dims, SRTensorTypeFloat, SRMemLayoutNested);
 
     // running the model 
     client.run_model(model_key, {in_key}, {out_key});
@@ -85,7 +85,7 @@ int main(int argc, char* argv[]) {
     std::vector<size_t> output_dims = {1000, 1};
 
     std::vector<float> result(1000, 0);
-    client.unpack_tensor(out_key, result.data(), output_dims,SRTensorTypeFloat, SRMemLayoutContiguous);
+    client.unpack_tensor(out_key, result.data(), output_dims,SRTensorTypeFloat, SRMemLayoutNested);
 
 
     // Create an output file stream
